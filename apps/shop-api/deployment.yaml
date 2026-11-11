@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: shop-api
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       app: shop-api
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: podinfo
-          image: ghcr.io/stefanprodan/podinfo:6.7.0
+          image: ghcr.io/stefanprodan/podinfo:6.7.1
           ports:
             - containerPort: 9898
